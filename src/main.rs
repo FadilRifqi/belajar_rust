@@ -1,6 +1,7 @@
 use std::io::{self, Write};
 mod calculator;
 mod list_mahasiswa;
+mod tictactoe;
 
 fn main() {
     let mut input_user = String::new();
@@ -8,7 +9,8 @@ fn main() {
     while run {
         println!("1. List Mahasiswa");
         println!("2. Calculator");
-        println!("3. Exit");
+        println!("3. Tic Tac Toe");
+        println!("4. Exit");
         print!("Pilih menu: ");
         io::stdout().flush().unwrap();
         input_user.clear();
@@ -18,7 +20,8 @@ fn main() {
         match input_user {
             Ok(1) => list_mahasiswa::main(),
             Ok(2) => calculator::main(),
-            Ok(3) => break,
+            Ok(3) => tictactoe::main(),
+            Ok(4) => break,
             _ => println!("Menu tidak tersedia atau input tidak valid"),
         }
     }
