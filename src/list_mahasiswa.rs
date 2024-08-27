@@ -10,7 +10,7 @@ struct DaftarMahasiswa {
     mahasiswa: Vec<Mahasiswa>,
 }
 
-fn main() {
+pub fn main() {
     let mut banyak_mahasiswa = String::new();
     let mut input_user = String::new();
     let mut daftar_mahasiswa = DaftarMahasiswa {
